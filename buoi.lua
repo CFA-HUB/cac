@@ -1196,8 +1196,10 @@ function CFAHub:CreateWindow(title, gameName, intro)
                 end)()
 
                 if default then
+                    callback(default)
                     TextLabel.Text = droptitle .. ": " .. default
                 elseif default and search then
+                    callback(default)
                     DropSearch.Text = droptitle .. ": " .. default
                 end
                 
